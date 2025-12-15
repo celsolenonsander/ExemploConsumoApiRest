@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C298C061-679D-454E-9BFB-74E1BA36DEDE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="IntimaDigital.CmdDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IntimaDigital.Demo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="IntimaDigital.TesteHeaderHTTP.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="IntimaDigital_CmdDemo">
+        <MSBuild Projects="IntimaDigital.CmdDemo.dproj"/>
+    </Target>
+    <Target Name="IntimaDigital_CmdDemo:Clean">
+        <MSBuild Projects="IntimaDigital.CmdDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntimaDigital_CmdDemo:Make">
+        <MSBuild Projects="IntimaDigital.CmdDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntimaDigital_Demo">
+        <MSBuild Projects="IntimaDigital.Demo.dproj"/>
+    </Target>
+    <Target Name="IntimaDigital_Demo:Clean">
+        <MSBuild Projects="IntimaDigital.Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntimaDigital_Demo:Make">
+        <MSBuild Projects="IntimaDigital.Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="IntimaDigital_TesteHeaderHTTP">
+        <MSBuild Projects="IntimaDigital.TesteHeaderHTTP.dproj"/>
+    </Target>
+    <Target Name="IntimaDigital_TesteHeaderHTTP:Clean">
+        <MSBuild Projects="IntimaDigital.TesteHeaderHTTP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="IntimaDigital_TesteHeaderHTTP:Make">
+        <MSBuild Projects="IntimaDigital.TesteHeaderHTTP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="IntimaDigital_CmdDemo;IntimaDigital_Demo;IntimaDigital_TesteHeaderHTTP"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="IntimaDigital_CmdDemo:Clean;IntimaDigital_Demo:Clean;IntimaDigital_TesteHeaderHTTP:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="IntimaDigital_CmdDemo:Make;IntimaDigital_Demo:Make;IntimaDigital_TesteHeaderHTTP:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

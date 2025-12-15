@@ -1,0 +1,57 @@
+# ======================
+# Delphi / RAD Studio
+# ======================
+
+# Binários
+*.exe
+*.dll
+*.bpl
+*.dcp
+*.map
+
+# Compilação
+*.dcu
+*.o
+*.ppu
+
+# Cache / IDE
+*.local
+*.identcache
+*.stat
+*.dsk
+*.skincfg
+*.proj.local
+
+# Pastas geradas
+__history/
+__recovery/
+Win32/
+Win64/
+Android/
+Android64/
+iOSDevice32/
+iOSDevice64/
+OSX64/
+Linux64/
+
+# Deploy
+*.apk
+*.aab
+*.ipa
+
+# Backup e temporários
+*.~*
+*.bak
+*.tmp
+
+# Logs
+*.log
+
+# Configurações de usuário
+*.cbk
+
+# ======================
+# Git / SO
+# ======================
+.DS_Store
+Thumbs.db
