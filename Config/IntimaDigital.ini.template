@@ -1,0 +1,29 @@
+[API]
+; URL base da API (deixe em branco para usar o padrão do ambiente)
+BaseURL=https://api.hom.intimadigital.com.br/
+
+; Credenciais de acesso
+Username=seu-usuario-aqui
+Password=sua-senha-aqui
+
+; Ambiente (0=Homologação, 1=Produção)
+Environment=0
+
+; Configurações de timeout
+Timeout=30000
+RetryCount=3
+RetryDelay=1000
+
+[Log]
+; Configurações de log
+Enabled=True
+Level=1 ; 0=Debug, 1=Info, 2=Warning, 3=Error, 4=Fatal
+File=IntimaDigital.log
+
+[Proxy]
+; Configurações de proxy (se necessário)
+UseProxy=False
+Host=
+Port=8080
+Username=
+Password=
